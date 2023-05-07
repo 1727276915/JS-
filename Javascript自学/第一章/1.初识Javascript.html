@@ -1,0 +1,45 @@
+<!-- JS的三大部分 -->
+<!-- ECMAScript语法标准:由ECMA制定的一种脚本语言的标准化规范 -->
+<!-- DOM：通过文档对象模型（dom）操作网页 -->
+<!-- BOM：通过浏览器对象模型（bom）操作浏览器 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="a">开始</div>
+    <script>
+        document.write('hello world');
+        var text = document.getElementById('a');
+        text.onclick = function() {
+            alert('你点击了开始');
+        }
+        localStorage.setItem('a', 1);
+    </script>
+</body>
+
+</html>
+<!-- 解释 -->
+<!-- 定义：翻译一行执行一行，不生成编译文件 -->
+<!-- 优点：可移植性较好，只有解释环境，可在不同的操作系统上运行 -->
+<!-- 缺点：运行需要解释环境，运行起来比编译的要慢 -->
+<!-- 例子：Javascript,PHP,Python -->
+
+<!-- 编译 -->
+<!-- 定义：通篇编译，生成编译文件后再执行 -->
+<!-- 优点：运行速度快，代码效率搞，编译后的程序不可修改，保密性较好 -->
+<!-- 缺点：代码需要经过编译方可运行，可移植性较差，只能再兼容的操作系统上运行 -->
+<!-- 例子：C,C++ -->
+
+<!-- 单线程（JS引擎是单线程执行的） -->
+<!-- 同一时间只能做一件事 -->
+<!-- 为什么JS是单线程捏？多线程可以提高开发效率，为什么设计成单线程捏？ -->
+<!-- 主要是由JS的用途决定的 -->
+<!-- 与用户互动 -->
+<!-- 操作DOM（如果JS是多线程那么同时操作编辑DOM和删除DOM的两个事件会产生矛盾指令） -->

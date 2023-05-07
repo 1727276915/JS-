@@ -1,0 +1,70 @@
+<!-- 解析过程 -->
+<!-- 直接打印未申明的变量会报错 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(a);
+    </script>
+</body>
+
+</html> -->
+<!-- 声明被提升到最前 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(a);
+        var a = 1;
+        console.log(a);
+        /*
+        实际：
+        var a = 1;
+        console.log(a);
+        a = 1;
+        console.log(a);//1
+        */
+    </script>
+</body>
+
+</html> -->
+<!-- 变量提升带来的影响 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function DD() {
+            if (true) {
+                console.log(a); //不报错，打印undefined
+            }
+            var a = 1;
+        }
+        DD();
+    </script>
+</body>
+
+</html>
