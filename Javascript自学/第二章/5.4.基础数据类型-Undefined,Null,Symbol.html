@@ -1,0 +1,84 @@
+<!-- Undefined/Null -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(typeof null);
+        console.log(Number(null));
+        //Null是一个表示“无”的对象，转为数值是为0；undefined是一个表示“无”的原始值，转为数值为NaN。
+        console.log(typeof(NaN));
+        console.log(Number(NaN));
+    </script>
+</body>
+
+</html> -->
+
+<!-- Undefined -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a;
+        console.log(a); //a undefined
+        // 变量被声明了，但没有赋值的，就等于undefined
+        var object = new Object();
+        console.log(object.p);
+        // 对象没有赋值的属性，该属性的值为undefined
+        function f() {
+
+        }
+        var x = f();
+        console.log(x);
+        // 函数没有返回值时，默认返回undefined
+    </script>
+</body>
+
+</html> -->
+
+<!-- Null -->
+<!-- Null表示“没有对象”,即该处不应该有值 -->
+<!-- 用法：
+（1） 作为函数的参数，表示该函数的参数不是对象
+（2） 作为对象原型链的终点
+     Object.getPrototypeOf(Object.prototype) // null -->
+
+<!-- Symbol(es6语法) -->
+<!-- Symbol('name')生成唯一属性 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = {
+            b: '1',
+        };
+        var b = Symbol('b');
+        a[b] = '2';
+        console.log(a);
+    </script>
+</body>
+
+</html>

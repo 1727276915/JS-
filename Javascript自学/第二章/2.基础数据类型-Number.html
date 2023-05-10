@@ -1,0 +1,146 @@
+<!-- 字面量声明 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+        console.log(typeof a);
+    </script>
+</body>
+
+</html> -->
+
+<!-- 数字对象方式声明 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = new Number(1);
+        console.log(a + 3);
+    </script>
+</body>
+
+</html> -->
+<!-- 整数判断 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1,
+            b = 3.4;
+        console.log(Number.isFinite(a));
+        console.log(Number.isFinite(b));
+    </script>
+</body>
+
+</html> -->
+<!-- 指定返回的小数位数 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 11.45141919810;
+        console.log(a.toFixed(2)); //最后一位使用四舍五入
+    </script>
+</body>
+
+</html> -->
+
+<!-- NaN-表示非数字值 -->
+<!-- isNaN()用来判断一个值是不是数字 -->
+<!-- 如果该值转换为number等于NaN,则此函数返回true -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = '123';
+        var b = 'asda';
+        console.log(Number('123'));
+        console.log(isNaN(a));
+        console.log(isNaN(b));
+    </script>
+</body>
+
+</html> -->
+<!-- 注意：null,""两个值会被判断为数字，所以使用前应该屏蔽 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 'null';
+        console.log(isNaN(a));
+        if (a !== null && a !== '') {
+            isNaN(a);
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- 浮点精度 -->
+<!-- JS语言在浮点数计算时会有精度误差问题 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 0.1 + 0.2;
+        console.log(a.toFixed(2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!-- 声明定义 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字面量声明
+        var a = '114514'
+        console.log(typeof a);
+    </script>
+</body>
+
+</html> -->
+
+<!-- 字符串对象方式声明 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = new String('114514');
+    </script>
+</body>
+
+</html> -->
+<!-- 常用字符串操作方法 -->
+<!-- 连接字符串 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = '鸡你太美',
+            b = 'https://www.bilibili.com/video/BV11e4y1e7CY/?spm_id_from=333.788.recommend_more_video.2&vd_source=32a639196a92387b6b8b0b9aa47c01f4';
+        var c = a + '网址为' + b;
+        console.log(c);
+    </script>
+</body>
+
+</html> -->
+<!-- 获取字符串的长度 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = '鸡你太美';
+        console.log(a.length);
+    </script>
+</body>
+
+</html> -->
+<!-- 大小写转换 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 'wryyyyyyyyyy';
+        console.log(a.toUpperCase());
+        var b = 'WRYYYYYYYY';
+        console.log(b.toLowerCase());
+    </script>
+</body>
+
+</html> -->
+<!-- 移除空白 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = ' 你干嘛，哎哟~ '; //如果是字符之间有两个空格的话是去不掉的
+        console.log(a.length);
+        var b = a.trim();
+        console.log(b.length);
+    </script>
+</body>
+
+</html> -->
+
+<!-- 获取单字符 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 'SKADI';
+        console.log(a.charAt(3));
+    </script>
+</body>
+
+</html> -->
+<!-- 截取字符串 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 'SKADI';
+        console.log(a.slice(1, 4)); //截取方式是左闭右开
+    </script>
+</body>
+
+</html> -->
+<!-- 查找字符串 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('document'.indexOf('e'));
+        console.log('document'.indexOf('e', 2)); //从第2位开始搜索(包含第二位)
+    </script>
+</body>
+
+</html> -->
+<!-- 替换字符串 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = 'SKADI老婆';
+        var ChangeName = name.replace('老婆', '漂亮滴很呐');
+        console.log(ChangeName);
+    </script>
+</body>
+
+</html> -->
+<!-- 类型转换(将2023-5-10时间格式转换为2023/5/10) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var time = '2023-5-10';
+        console.log(time.split('-'));
+        var a = time.split('-');
+        var b = a.join('/');
+        console.log(b);
+    </script>
+</body>
+
+</html>
