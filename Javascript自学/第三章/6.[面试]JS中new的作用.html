@@ -1,0 +1,70 @@
+<!-- 没有new,直接调用构造函数 -->
+<!-- 构造函数内部的this指向的是window -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(obj) {
+            this.name = obj.name;
+            this.score = obj.score;
+            this.grade = obj.grade;
+            console.log(this);
+        }
+
+        var stu1 = Student({
+            name: 'Jack',
+            score: 88,
+            grade: 3,
+        });
+        console.log(stu1);
+        //1.把对象返回了回来
+        //2.把构造函数的this指向了要返回的对象上
+
+    </script>
+</body>
+
+</html> -->
+<!-- new -->
+<!-- 1.创造了新对象 -->
+<!-- 2.将构造函数的作用域赋值给新对象 -->
+<!-- 3.执行构造函数代码（为这个新对象添加属性） -->
+<!-- 4.返回新对象 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(obj) {
+            //创建了一个空对象，然后将student的作用域(即this)指向了空对象
+            // this={}
+            this.name = obj.name;
+            this.score = obj.score;
+            this.grade = obj.grade;
+            // return this
+        }
+
+        var stu1 = new Student({
+            name: 'Jack',
+            score: 88,
+            grade: 3,
+        });
+        console.log(stu1);
+    </script>
+</body>
+
+</html>

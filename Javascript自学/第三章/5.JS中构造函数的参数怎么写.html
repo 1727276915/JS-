@@ -1,0 +1,58 @@
+<!-- 固定参数应用场景 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(name, price, size) {
+            this.name = name;
+            this.price = price;
+            this.size = size;
+        }
+
+        var benc = new Car('ben', '40w', 'big');
+        console.log(benc);
+
+        var audi = new Car('30w', 'audi', 'small');
+        console.log(audi);
+        //可见固定参数应用场景需要明确知道对象属性，位置要严格对应
+    </script>
+</body>
+
+</html> -->
+<!-- 对象类型的参数 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(obj) {
+            this.name = obj.name;
+            this.price = obj.price;
+            this.size = obj.size;
+        }
+        var audi = new Car({
+            size: 'small',
+            name: 'audi',
+            price: '30w'
+        });
+        console.log(audi);
+        //可见对象类型的参数维护方便，使用起来也方便
+    </script>
+</body>
+
+</html>

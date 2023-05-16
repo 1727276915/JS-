@@ -1,0 +1,57 @@
+<!-- 浅拷贝 -->
+<!-- 定义：对于引用类型而言，指两个引用类型指向同一个地址，改变一个，另一个也会随之改变 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = {
+            age: 18
+        };
+        var b = a;
+        a.age = 20;
+        console.log(a, b);
+    </script>
+</body>
+
+</html>
+
+<!-- 深拷贝 -->
+<!-- 定义：对于引用类型而言，复制后引用类型指向一个新的内存地址，两个对象改变互不影响 -->
+<!-- 基础类型数据的赋值与深拷贝类似 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(JSON.stringify({
+        //     name: 'li'
+        // })); //对象序列化
+        // console.log(JSON.parse(JSON.stringify({
+        //         name: 'li'
+        //     }))); //反序列化
+        var a = {
+            age: 18
+        };
+        var b = JSON.parse(JSON.stringify(a));
+        a.age = 20;
+        console.log(a, b);
+        // 注意：数组的concat、slice是一层对象的深拷贝，如果对象的子属性是引用类型的话，就是浅拷贝
+    </script>
+</body>
+
+</html>
