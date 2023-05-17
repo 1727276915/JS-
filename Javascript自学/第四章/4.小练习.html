@@ -1,0 +1,52 @@
+<!-- 题目一：将字符串"张三，李四，小明，小红"，转换成数组，并删除"李四"  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '张三,李四,小明,小红';
+        var list = str.split(',');
+        // console.log(list);
+        var index = list.indexOf('李四');
+        list.splice(1, 1);
+        console.log(list);
+    </script>
+</body>
+
+</html> -->
+<!-- 题目二：在排序好的数组中，按照大小顺序插入数据 -->
+<!-- var list = [23,32,45,53,62,68]; -->
+<!-- 插入的值为44 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var list = [23, 32, 45, 53, 62, 68];
+        var num = 44;
+        var index = 0;
+        for (var i = 0; i < list.length; i++) {
+            if (num > list[i]) {
+                index++;
+            }
+        } //使用for循环找到插入的位置
+        list.splice(index, 0, num); //插入数据
+        console.log(list);
+    </script>
+</body>
+
+</html>
