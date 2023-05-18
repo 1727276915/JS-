@@ -1,0 +1,50 @@
+<!-- switch -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCript>
+        var weather = '雪';
+        switch (weather) {
+            //switch后面的括号里面写的是要判断的变量
+            case '晴':
+                console.log('今天天气晴天唉~');
+                break;
+                //如果匹配到了，就会执行break，如果没有匹配到，就会执行default
+            case '阴':
+                console.log('今天天气阴沉沉的，唉~');
+                break;
+            case '雨':
+                console.log('今天下雨唉！');
+                break;
+            case '雪':
+                console.log('可是雪啊，飘进双眼');
+                break;
+            default:
+                console.log('今天啥天气？');
+                break;
+                //default可以省略
+        }
+    </SCript>
+</body>
+
+</html>
+<!-- 和if的选择 -->
+<!-- 1.如果判断的条件比较多，而且每个条件都是互斥的，那么使用switch比较方便 -->
+<!-- 2.如果判断的条件比较少，而且每个条件之间没有互斥关系，那么使用if比较方便 -->
+<!-- 注意 -->
+<!-- 1.如果switch后面的括号里面写的是一个变量，那么case后面的值必须是常量 -->
+<!-- 2.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是变量 -->
+<!-- 3.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是一个范围 -->
+<!-- 4.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是一个表达式 -->
+<!-- 5.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是一个函数的返回值 -->
+<!-- 6.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是一个对象的属性 -->
+<!-- 7.如果switch后面的括号里面写的是一个表达式，那么case后面的值可以是一个对象的方法的返回值 -->
+<!-- 8.内部严格按照===的规则，一定要值和类型相等才能使用break语句打断程序 -->

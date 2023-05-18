@@ -1,0 +1,101 @@
+<!-- 1.打印1-100之间7的倍数的个数及总和 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        var count = 0;
+        for (var i = 1; i <= 100; i++) {
+            //判断i是否是7的倍数
+            if (i % 7 == 0) {
+                sum += i; //sum=sum+i
+                count++; //count=count+1
+                console.log(i); //7 14 21 28 35 42 49 56 63 70 77 84 91 98
+            }
+        }
+        console.log(sum); //735
+        console.log(count); //14
+    </script>
+</body>
+
+</html> -->
+<!-- 2.使用for循环输出一下图形 -->
+<!-- *****
+     *****
+     *****
+     *****
+     ***** -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    document.write('*****<br>');
+        //    document.write('*****<br>');
+        //    document.write('*****<br>');
+        //    document.write('*****<br>');
+        //    document.write('*****<br>');
+        //超级笨蛋的方法🤣
+        //使用for循环来解决问题
+        //    for (var i = 1; i <= 5; i++) {
+        //        document.write('*****<br>');
+        //    }
+        //漂亮滴很呐ヾ(≧▽≦*)o
+        //也使用两个for循环来解决问题
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+     //放眼整个代码圈也是相当炸裂(⊙o⊙)
+    </script>
+</body>
+
+</html> -->
+<!-- 2.2使用两个for循环输出一下图形 -->
+<!-- *
+     **
+     ***
+     ****
+     ***** -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //外层循环控制行数
+        for (var i = 1; i <= 5; i++) {
+            //内层循环控制每一行的列数
+            for (var j = 1; j <= i; j++) {
+                document.write('*');
+            }
+            //换行
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

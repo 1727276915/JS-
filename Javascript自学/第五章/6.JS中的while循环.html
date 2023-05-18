@@ -1,0 +1,57 @@
+<!-- while -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        var i = 1;
+        // while (i <= 10) {
+        //     sum = sum + i;
+        //     i++;
+        // }
+        // console.log(sum); //55
+        while (i <= 10) {
+            i++;
+            sum = sum + i;
+            console.log(sum);
+        }
+        console.log(sum); //65
+        //调换了i++和sum = sum + i;的顺序，导致结果不一样了，这就是while和for的区别
+    </script>
+</body> -->
+
+</html>
+<!-- do/while -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        var i = 1;
+        do {
+            sum = sum + i;
+            i++;
+        } while (i <= 10);
+        // do/while循环和while循环的区别在于，do/while循环会先执行一次循环体，然后再判断条件是否成立，如果成立，就继续执行循环体，如果不成立，就结束循环
+        // while循环会先判断条件是否成立，如果成立，就执行循环体，如果不成立，就结束循环
+        console.log(sum);
+    </script>
+</body>
+
+</html>
