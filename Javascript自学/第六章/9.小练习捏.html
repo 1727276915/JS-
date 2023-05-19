@@ -1,0 +1,109 @@
+<!-- 题目一：编写一个函数，排列任意元素个数的数字数组，按从小到大的顺序输出 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var list = [1, 1, 4, 5, 1, 4];
+
+        function sort(list) {
+            for (var i = 0; i < list.length; i++) { //这里的i不能等于list.length-1,否则会出现重复的数字
+                for (var j = 0; j < list.length; j++) { //这里的j不能等于i,否则会出现重复的数字
+                    if (list[i] < list[j]) { //这里的i和j不能相等,否则会出现重复的数字
+                        var temp = list[i];
+                        list[i] = list[j];
+                        list[j] = temp;
+                        //交换位置
+                    }
+                }
+            }
+            return list;
+            //返回值
+        }
+        console.log(sort(list));
+        //调用函数
+    </script>
+</body>
+
+</html> -->
+<!-- 第二种方法（不调用函数） -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var list = [1, 9, 1, 9, 8, 1, 0];
+        list.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(list); //这个方法是直接调用的,不需要写函数
+    </script>
+</body>
+
+</html> -->
+<!-- 第三种方法（第二种方法使用了函数） -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var list = [1, 9, 1, 9, 8, 1, 0];
+
+        function sort(list) {
+            list.sort(function(a, b) {
+                return a - b; //这里的return a-b是返回值,不是调用函数
+            });
+            return list; //这里的return list是返回值,不是调用函数.00
+        }
+        console.log(sort(list)); //这个方法是调用了函数的
+    </script>
+</body>
+
+</html> -->
+<!-- 题目二输入某个数字，计算数字的阶乘 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test(n) {
+            if (n == 1) {
+                return 1; //这里的1是返回值
+            } else {
+                return n * test(n - 1); //这里的n是传入的参数
+            }
+        }
+        console.log(test(3)); //这里的3是传入的参数
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test(num) {
+            console.log(num);
+            num++;
+            // test(num);
+            //递归函数必须要有结束条件，否则会无限递归
+            return num <= 10 ? test(num) : null;
+        }
+        test(1); //无限递归
+    </script>
+</body>
+
+</html>

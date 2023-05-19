@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function() { //匿名函数
+            console.log(1);
+        })(); //立即执行函数,作用是帮我们创建一个独立的作用域,避免变量污染并立即调用函数
+        //特点
+        //1.函数定义完后立即调用
+        //2.自动执行,不需要调用
+        //3.执行完后,立即销毁
+
+        //第二种写法
+        (function() {
+            console.log(2);
+        }());
+        //也可以这样写捏✔
+    </script>
+</body>
+
+</html> -->
+<!-- 注意：立即执行函数前面的语句必须加分号，否则会解析错误 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+        (function() {
+            console.log(a);
+            var a = 2;
+        })();
+        //结果是undefined,因为函数内部有var a = 2,所以会先声明,但是不会赋值,所以是undefined
+        //如果没有var a = 2,那么结果就是1
+    </script>
+</body>
+
+</html>

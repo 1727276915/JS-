@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function sum(a, b) { //a,b就是形参
+        //     console.log(a + b);
+        //     return a + b;
+        // }
+        // console.log(sum(1, 2));
+
+        //匿名函数表达式
+        // var sum = function(a, b) { //a,b就是形参
+        //     console.log(a + b);
+        //     return a + b;
+        // }
+        // console.log(sum(1, 2));
+
+        //构造函数声明
+        var sum = new Function("a", "b", "console.log(a + b);return a + b;");
+        console.log(sum());
+        //声明函数过程中，函数里的语句是不会执行的，只有在调用函数的时候，函数里的语句才会执行
+    </script>
+</body>
+
+</html>

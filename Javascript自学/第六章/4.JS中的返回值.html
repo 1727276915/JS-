@@ -1,0 +1,49 @@
+<!-- return的作用 -->
+<!-- 返回值 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum() {
+            var a = 8;
+            return a === 8 ? 10 : 11;
+        }
+        console.log(sum());
+    </script>
+</body>
+
+</html> -->
+<!-- 中断函数 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test(a) {
+            if (!a) {
+                return 'a为空';
+                // return具有中断函数体的作用
+            }
+            return 'a不为空' + a;
+            //return只能写在函数体里面
+        }
+        console.log(test());
+    </script>
+</body>
+
+</html>

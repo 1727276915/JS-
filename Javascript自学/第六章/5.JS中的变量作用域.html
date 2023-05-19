@@ -1,0 +1,35 @@
+<!-- 全局变量 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = '我是全局变量';
+        console.log(a);
+
+        function test() {
+            // console.log(a);
+            var b = '我是局部变量';
+
+            function test2() {
+                console.log(a);
+                //函数里面可以访问全局变量
+                console.log(b);
+                //函数里面可以访问局部变量
+                //子函数可以访问父函数的变量，但是父函数不能访问子函数的变量
+            }
+            test2();
+        }
+        console.log(b); //b is not defined
+        test();
+    </script>
+</body>
+
+</html>
