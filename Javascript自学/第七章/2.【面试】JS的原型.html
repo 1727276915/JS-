@@ -1,0 +1,61 @@
+<!-- 原型 -->
+<!-- 1.原型的概念 -->
+<!-- 原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Person.prototype.name = "张三"; //原型
+        function Person() {}
+        var Person1 = new Person(); //创建一个对象
+        var Person2 = new Person();
+        console.log(Person1.name); //张三
+        console.log(Person2.name); //张三
+    </script>
+</body>
+
+</html> -->
+
+<!-- 原型的作用 -->
+<!-- 给我们构造函数实例化出来的对象设置公共属性或方法使用的 -->
+<!-- 方法写在哪 -->
+<!-- 方法写在原型上，属性写在构造函数里面，写在构造函数里的方法和属性会重新克隆一次，会导致占用内存较高 -->
+<!-- 需要配置的属性是写在构造函数上 -->
+<!-- 只有构造函数才能对原型上的属性进行改动 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(obj) {
+            this.name = '李四';
+            this.say = function() {
+                console.log("hi");
+            };
+        }
+        Person.prototype.name = "张三";
+        Person.prototype.say = function() {
+            console.log("hello");
+        };
+        var Person1 = new Person({});
+        console.log(Person1.name); //李四
+        Person1.say(); //hi
+    </script>
+</body>
+
+</html>

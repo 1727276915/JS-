@@ -1,0 +1,31 @@
+<!-- 需求：写一个对两个数字进行加法运算计算器 -->
+<!-- 为什么要写在函数里 -->
+<!-- 1.因为函数里声明的变量或者函数，对外界无影响 -->
+<!-- 2.为了让函数在浏览器加载的时候执行，那么还要用立即函数 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function() {
+            function Sum() {};
+            Sum.prototype.add = function(a, b) {
+                return a + b;
+                //定义一个构造函数，构造函数的原型上有一个add方法
+            };
+            window.Sum = Sum; //将构造函数暴露到全局
+        })();
+        var sum = new Sum(); //实例化构造函数
+        var c = sum.add(1, 2); //调用构造函数的add方法
+        console.log(c); //3
+    </script>
+</body>
+
+</html>
