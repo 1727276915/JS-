@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.创建ajax对象
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            //code for IE6, IE5兼容
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //2.设置请求的方法和地址
+        xhr.open('GET', 'https://api.xdclass.net/pub/api/v1/web/all_category');
+
+        //3.发送请求
+        xhr.send();
+
+        //4.监听状态的变化
+        xhr.onreadystatechange = function() {
+            //readyState == 4 说明请求已完成
+            //status == 200 说明请求成功
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    //5.处理返回的结果
+                    alert(xhr.responseText);
+                } else {
+                    alert('出错了,Err;' + xhr.status);
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

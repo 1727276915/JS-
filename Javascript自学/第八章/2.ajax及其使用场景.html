@@ -1,0 +1,42 @@
+<!-- 什么是ajax -->
+<!-- 帮助为什么向服务器发送请求，不用刷新页面，就可以获取数据 -->
+<!-- 同步与异步 -->
+<!-- 同步：发送请求后，必须等待服务器响应，才能继续执行后续代码 -->
+<!-- 异步：发送请求后，不用等待服务器响应，就可以继续执行后续代码 -->
+<!-- 原理 -->
+<!-- 1.创建XMLHttpRequest对象,通过XmlHttpRequest对象向服务器发送异步请求，从服务器服务器获取数据 -->
+<!-- 2.创建一个回调函数，用于处理服务器响应的数据 -->
+<!-- 3.调用open方法，打开与服务器的连接 -->
+<!-- 4.调用send方法，向服务器发送请求 -->
+<!-- 5.调用onreadystatechange方法，监听服务器响应 -->
+<!-- 6.在回调函数中，处理服务器响应的数据 -->
+<!-- 7.通过JS来操作DOM而更新页面 -->
+<!-- 8.它是在IE5中首先引入的，是一种异步请求的技术 -->
+<!-- 9.它可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页内容，不阻塞程序运行，打到无刷新的效果 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        // alert(10); //弹出框会阻塞程序运行
+        // console.log(4); //弹出框关闭后才会执行
+        setTimeout(function() {
+            console.log(5);
+        }, 1000); //异步执行，不会阻塞程序运行
+        console.log(4); //先执行
+        //JS是单线程的，同一时间只能执行一条代码，如果有多条代码，会按照顺序执行
+        //而setTimeout是异步执行，不会阻塞程序运行，所以引入XMLHttpRequest请求处理异步数据
+    </script>
+</body>
+
+</html>

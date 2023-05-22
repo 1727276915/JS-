@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            "name": "张三",
+            "age": "24"
+                //JSON格式的数据
+        };
+        var a = JSON.stringify(obj); //将对象转换为JSON格式,也叫做序列化
+        var b = JSON.parse(a); //将JSON格式转换为对象,也叫做反序列化
+        console.log(a); //{"name":"张三","age":"24"}
+        console.log(b); //{name: "张三", age: "24"}
+    </script>
+</body>
+
+</html>
+<!-- 序列化与反序列化 -->
+<!-- 对象序列化后可以在网络上传输或者保存在硬盘和浏览器上，反序列化后可以重新变为对象 -->
