@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="yuan">我测，原</h1>
+        <p class="wz">https://www.bilibili.com/</p>
+        <p class="wz">我测，穹轨</p>
+    </div>
+    <script>
+        //查找节点
+        // var a = document.getElementById("yuan"); //获取id为yuan的元素
+        // console.log(a); //<h1 id="yuan">我测，原</h1>
+        // var b = document.getElementsByClassName("wz"); //获取类名为wz的元素
+        // console.log(b); //HTMLCollection(1) [p.wz]
+        // var c = document.getElementsByClassName("p"); //获取标签名为p的元素
+        // console.log(c); //HTMLCollection(2) [p.wz, p.wz]
+        // var d = document.getElementsByTagName('p')[1]; //获取第二个p元素
+        // console.log(d); //<p class="wz">我测，穹轨</p>
+        // var e = document.querySelector('#yuan'); //获取id为yuan的元素
+        // //querySelector()方法返回文档中匹配指定CSS选择器的一个元素,如果有多个元素满足条件，则只返回第一个匹配的元素且无法选择伪元素
+        // console.log(e); //<h1 id="yuan">我测，原</h1>
+        // var f = document.querySelector('.wz'); //获取类名为wz的元素
+        // console.log(f); //<p class="wz">https://www.bilibili.com/</p>
+
+        //改变元素内容
+        // yuan.innerHTML = "我测，粥"; //改变id为yuan的元素内容
+        // console.log(yuan.innerHTML); //我测，粥
+        // yuan.inerText = "我测，农 "; //改变id为yuan的元素内容
+        // console.log(yuan.innerText); //我测，农
+        // yuan.outerHTML = "我测，粥"; //改变id为yuan的元素内容
+        // console.log(yuan.outerHTML); //我测，粥
+        // yuan.outerText = "我测，农 "; //改变id为yuan的元素内容
+        // console.log(yuan.outerText); //我测，农
+        // yuan.id = "yuan1"; //改变id为yuan的元素id
+        // console.log(yuan.id); //yuan1
+        // wz.setAttribute("class", "wz1"); //改变id为wz的元素class
+        // console.log(wz.getAttribute("class")); //wz1
+        // wz.style.property = "value"; //改变id为wz的元素style
+        // console.log(wz.style.property); //value
+        // yuan.style.color = "red"; //改变id为yuan的元素style
+        // console.log(yuan.style.color); //red
+
+        //添加和删除元素
+        var div = document.createElement("div"); //创建一个div元素
+        div.innerHTML = "小黑子，蒸虾头"; //给div元素添加内容
+        document.body.appendChild(div); //将div元素添加到body元素中
+        var p = document.removeChild(wz); //删除wz元素
+        console.log(p); //<p class="wz">https://www.bilibili.com/</p>
+    </script>
+</body>
+
+</html>

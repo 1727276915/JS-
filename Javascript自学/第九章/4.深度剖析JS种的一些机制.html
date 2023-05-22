@@ -1,0 +1,70 @@
+<!-- 事件传播的两种机制 -->
+<!-- 冒泡 -->
+<!-- 事件冒泡：事件从最具体的元素开始触发，然后逐级向上传播，直到document对象 -->
+<!-- 捕获 -->
+<!-- 事件捕获：事件从最不具体的节点开始触发，然后逐级向下传播，直到事件的最具体的元素 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="father">
+        我是一个列表
+        <li id="son">第1个</li>
+        <!-- <li id="son">第2个</li>
+        <li id="son">第3个</li>
+        <li id="son">第4个</li>
+        <li id="son">第5个</li> -->
+    </ul>
+    <script>
+        // document.getElementById("father").onclick = function() {
+        //     console.log("点击了父元素");
+        // }
+        // document.getElementById("son").onclick = function() {
+        //         console.log("点击了子元素");
+        //     } //点击子元素，会先触发子元素的事件，再触发父元素的事件
+        //     //冒泡事件，先触发子元素的事件，再触发父元素的事件
+        // document.getElementById("father").addEventListener("click", function() {
+        //         console.log("点击了父元素");
+        //     },
+        //     true
+        // );
+        // document.getElementById("son").onclick = function() {
+        //         console.log("点击了子元素");
+        //     } //点击子元素，会先触发子元素的事件，再触发父元素的事件
+        //     //捕获事件，先触发父元素的事件，再触发子元素的事件
+        // document.getElementById("father").addEventListener("click", function() {
+        //     console.log("111");
+        //     console.log(event);
+        // }, true);
+        //事件代理
+        // 思考: 父级有那么多子元素，怎么区分事件本应该是哪个子元素的？
+        // 事件代理就是利用事件冒泡的机制，让父级代替子级执行事件函数。之指定一个事件处理程序就可以管理某一类型的所有事件。
+        // 事件代理的好处：1.可以大量节省内存占用，减少事件注册，比如在table上代理所有td的click事件就非常棒
+        // 2.可以实现当新增子对象时无需再次对其绑定事件，对于动态内容部分尤为合适
+        // 3.可以方便地对一批对象进行统一管理
+        // 4.可以实现对未来对象的事件监听
+        // 5.可以提高性能
+        // document.getElementById("father").addEventListener("click", function(e) {
+        //     if (e.target.textContent === "第1个") {
+        //         console.log("点击了第一个子元素");
+        //     }
+        // }, true);
+        // 事件代理的原理：事件冒泡
+        document.getElementById("father").addEventListener("click", function(e) {
+            console.log("111");
+        });
+        document.getElementById("son").addEventListener("click", function(e) {
+            console.log("222");
+            e.stopPropagation(); //阻止事件冒泡
+        });
+    </script>
+</body>
+
+</html>

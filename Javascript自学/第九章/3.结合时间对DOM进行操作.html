@@ -1,0 +1,60 @@
+<!-- 什么是事件 -->
+<!-- 事件是可以被 JavaScript 侦测到的行为。例如图片元素被点击 -->
+<!-- 事件触发时，可设置执行一段JS代码 -->
+<!-- 常见的HTML事件 -->
+<!-- onload: 页面加载完成后触发 -->
+<!-- onunload: 页面关闭时触发 -->
+<!-- onresize: 浏览器窗口大小改变时触发 -->
+<!-- onfocus: 元素获得焦点时触发 -->
+<!-- onblur: 元素失去焦点时触发 -->
+<!-- onchange: 元素内容改变时触发 -->
+<!-- onclick: 鼠标点击时触发 -->
+<!-- onmouseout: 鼠标移出时触发 -->
+<!-- onmouseover: 鼠标移入时触发 -->
+<!-- onkeydown: 键盘按下时触发 -->
+<!-- 如何对事件做出反应 -->
+<!-- 1. 通过元素的事件属性 -->
+<!-- 2. 通过addEventListener()方法 -->
+<!-- addEventListener()方法用于给DOM对象添加事件监听器，当指定的事件发生时，指定的回调函数就会被执行。 -->
+<!-- removeEventListener()方法用于移除事件监听器，当指定的事件发生时，指定的回调函数就不会被执行。  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="test()" id="SKADI">我测，蒂蒂老婆！</div>
+    <br />
+    <div class="wz">https://space.bilibili.com/286407819?spm_id_from=333.1007.0.0</div>
+    <script>
+        function test() {
+            console.log("你点击了一下");
+        }
+        var wangzhi = document.getElementsByClassName("wz")[0];
+        wangzhi.addEventListener("click", function() { //addEventListener() 方法用于向指定元素添加事件句柄。
+            console.log("你点击了一下下"); //addEventListener() 方法需要两个参数：事件名称和事件触发后调用的函数。
+        });
+        wangzhi.addEventListener("click", test1);
+        wangzhi.addEventListener("click", function() {
+            console.log("你点击了一下下捏~");
+        });
+        wangzhi.addEventListener("mouseover", function() {
+            console.log("你移动到了上面");
+        });
+
+        function test1() {
+            console.log("你点击了一下");
+        }
+        wangzhi.removeEventListener("click", test1); //removeEventListener() 方法用于移除事件句柄。
+        document.getElementById('SKADI').onclick = function() {
+                console.log("你点击了一下下捏~");
+            } //通过元素的事件属性
+    </script>
+</body>
+
+</html>

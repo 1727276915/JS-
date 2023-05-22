@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("1");
+        console.log("2");
+        console.log("3");
+        var timer = setTimeout(function() { //定时器
+            console.log("5"); //延迟执行
+        }, 6000); //6秒后执行
+        clearTimeout(timer); //清除定时器
+
+        var timer2 = setInterval(function() { //定时器
+            console.log("6"); //定时执行
+        }, 4000); //4秒后执行
+        // clearInterval(timer2); //清除定时器
+        setTimeout(function() {
+            clearInterval(timer2); //清除定时器
+        }, 9000); //9秒后执行
+    </script>
+</body>
+
+</html>

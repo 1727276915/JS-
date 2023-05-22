@@ -1,0 +1,36 @@
+<!-- 什么是DOM -->
+<!-- DOM就是文档对象模型，是一个抽象的概念 -->
+<!-- DOM是一种针对XML但经过扩展用于HTML的应用程序编程接口(API) -->
+<!-- DOM是一种与平台和语言无关的接口，允许程序和脚本动态地访问和更新文档的内容、结构和样式 -->
+<!-- DOM是一种树形结构，它将文档视为一系列的节点，这些节点包含着文档中的元素、文本、注释、文档类型、处理指令等 -->
+<!-- DOM定义了访问和操作HTML和XML文档的标准方法 -->
+<!-- HTML和txt文本的区别 -->
+<!-- HTML是一种标记语言，它使用标记标签来描述网页，HTML是有组织的结构化文件 -->
+<!-- txt是一种纯文本，它是一种简单的文本文件，没有任何格式，没有任何排版，没有任何样式 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>我测！原</h1>
+    <script>
+        var h1 = document.getElementsByTagName('h1')[0];
+        // console.log(h1);
+        console.log(h1.outerHTML);
+        console.log(h1.outerText);
+    </script>
+</body>
+
+</html>
+<!-- 什么是DOM树 -->
+<!-- DOM树是一个树形结构，它将文档视为一系列的节点，将每个HTML元素定义为节点，这些节点包含着文档中的元素、文本、注释、文档类型、处理指令等 -->
+<!-- DOM树的根节点是document对象 -->
+<!-- DOM树的每个节点都是一个对象且每个节点都有自己的属性和方法 -->
+<!-- DOM树中的每个节点都有父子关系，除了根节点 -->
+<!-- DOM树中的每个节点都有兄弟关系 -->
