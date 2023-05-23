@@ -1,0 +1,59 @@
+<!-- 什么是Cookie -->
+<!-- Cookie是存储在客户端的一小段文本信息，每个Cookie的大小一般不能超过4KB，每个域名下的Cookie数量也是有限制的，一般不能超过20个。 -->
+<!-- Cookie的作用 -->
+<!-- Cookie的作用主要有以下几个方面： -->
+<!-- 1.会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息） -->
+<!-- 2.个性化设置（如用户自定义设置、主题等） -->
+<!-- 3.浏览器行为跟踪（如跟踪分析用户行为等） -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+                checkCookie();
+            }
+            // 保存cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date(); //获取当前时间
+            d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000); //设置过期时间
+            var expires = 'expires=' + d.toGMTString();
+            document.cookie = cname + '=' + cvalue + ';' + expires;
+        }
+
+        console.log(new Date().getTime());
+        // 获取cookie
+        function getCookie(cname) {
+            var name = cname + '=';
+            var ca = document.cookie.split(';'); // 将多个cookie字符串以;分割数组;
+            for (var i = 0; i < ca.length; i++) {
+                if (ca[i].indexOf(name) >= 0) {
+                    return ca[i].split('=')[1]
+                }
+            }
+            return '';
+        }
+
+        // 检查cookie
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user) {
+                alert("欢迎 " + user + " 再次访问");
+            } else {
+                user = prompt("请输入你的名字:", "");
+                if (user) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

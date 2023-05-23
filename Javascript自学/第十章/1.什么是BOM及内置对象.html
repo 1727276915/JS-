@@ -1,0 +1,89 @@
+<!-- 什么是BOM -->
+<!-- BOM: Browser Object Model, 浏览器对象模型 -->
+<!-- 内置对象 -->
+<!-- 内置对象: 由浏览器提供的对象 -->
+<!-- 1. window对象 -->
+<!-- window对象: 代表浏览器的窗口 -->
+<!-- 2.Screen对象 -->
+<!-- Screen对象: 代表屏幕 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(window.screen.width); //屏幕宽度
+    </script>
+
+</body>
+
+</html> -->
+<!-- 3.Location对象 -->
+<!-- Location对象: 代表地址栏 -->
+<!-- <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(window.location.href); //地址栏
+        location.href = "https://www.baidu.com"; //跳转到百度
+    </script>
+</body> 
+
+</html> -->
+<!-- 4.History对象 -->
+<!-- History对象: 代表历史记录 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(window.history.length); //历史记录长度
+        history.back(); //后退
+        history.forward(); //前进
+        history.go(-2); //后退两步
+    </script>
+</body>
+
+</html> -->
+<!-- 5.localStorage对象 -->
+<!-- localStorage对象: 代表本地存储
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        localStorage.setItem("name", "张三"); //存储
+        console.log(localStorage.getItem("name")); //获取
+        localStorage.removeItem("name"); //删除
+    </script>
+</body>
+
+</html>
